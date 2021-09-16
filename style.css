@@ -7,3 +7,54 @@ body {
 main {
   flex-grow: 1;
 }
+
+#profile-card{
+  width: 20rem;
+ border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+#profile-card img {
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  }
+
+p.card-text {
+  border-top: 1px solid grey;
+  padding-top: 1rem;
+}
+
+.round {
+   border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+a.icon-link{
+  transition: all 0.25s linear;
+  display: inline-flex;
+  color: black;
+  font-size: 2rem;
+  width: 3rem;
+  max-width: max-content;
+  overflow: hidden;
+  word-wrap: normal;
+  text-decoration: none;
+  align-items: center;
+  padding: 1rem;
+}
+
+a.icon-link:hover{
+  transition: all .8s linear;
+  width: 100%;
+  max-width: max-content;
+  color: black;
+}
+
+.icon-link span.inner-text{
+  font-size: 20px;
+  vertical-align: bottom;
+  white-space: nowrap;
+}
