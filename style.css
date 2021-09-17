@@ -51,17 +51,25 @@ p.card-text {
   border-bottom-left-radius: 1rem;
   border-bottom-right-radius: 1rem;
 }
+a {
+  
+  text-decoration: none;
+  color: var(--dark);
+}
+
+a:hover{
+    color: var(--primary);
+    text-decoration: none;
+}
 
 a.icon-link{
   transition: width 0.25s linear;
   display: inline-flex;
-  color: var(--dark);
   font-size: 2rem;
   width: 3rem;
   max-width: max-content;
   overflow: hidden;
   word-wrap: normal;
-  text-decoration: none;
   align-items: center;
   padding: 1rem;
 }
@@ -70,7 +78,6 @@ a.icon-link:hover{
   transition: width .4s linear;
   width: 100%;
   max-width: max-content;
-  color: var(--primary);
 }
 
 .icon-link span.inner-text{
