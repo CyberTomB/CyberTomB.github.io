@@ -1,101 +1,233 @@
-
-<html lang="en"><head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<meta name="google-signin-client_id" content="1022131043022-0kdnf081a4qptkirlr0nbto4359g82q0.apps.googleusercontent.com">
-<link rel="icon" href="img/NISEI_CREDIT.svg" alt="" style="color:#683394;">
-<title>Tom Bowers</title>
-<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-<link href="https://fonts.googleapis.com/css?family=Fira+Sans|Quicksand" rel="stylesheet">
-<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-<link href="https://fonts.googleapis.com/css?family=Fira+Sans|Quicksand" rel="stylesheet">
-<link rel="stylesheet" href="https://bcw.blob.core.windows.net/public/bootstrap.min.css">
-<link rel="stylesheet" href="https://bcw.blob.core.windows.net/public/cw_theme.css">
-<link rel="stylesheet" href="//cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css">
-<link rel="stylesheet" href="style.css">
-<style>
-    .title {
-      padding-bottom: .35em;
-      border-bottom: 1px solid var(--primary);
-    }
-  </style>
-</head>
-<body>
-  <header class="container-fluid bg-dark">
-  </header>
-<main class="container-fluid bg-main">
-  <div class="row h-100 py-3">
-    <!-- Profile Card -->
-    <div class="col-md-4" id="about-me">
-      <div class="card shadow" id="profile-card">
-        <img src="https://avatars.githubusercontent.com/u/49372787?v=4" alt="Github Avatar" class="card-img-top">
-        <div class="card-body">
-          <h4 class="card-title pb-2">
-            <b>Thomas Bowers</b> | Full-Stack Developer
-          </h4>
-          <small><span class="mdi mdi-phone"></span> 208.570.8741 | <span class="mdi mdi-email"></span> tomcbowers@gmail.com</small>
-          <p class="card-text"> Vue, Javascript, NodeJS, DOTNET, C#, SQL, HTML, CSS ■ Over 2 years of management experience and over 7 years in community leadership ■ Board game enthusiast and the Treasure Valley's official pizza aficionado!
-          </p>
-        </div>
-      </div>
-   
-      <div class="" id="links-card">
-        <div class="d-flex justify-content-around flex-column">
-            <a href="https://github.com/CyberTomB" title="Github/CyberTomB" target="_blank" class="mdi mdi-github icon-link"><span class="inner-text">Github</span></a>
-
-            <a href="https://www.linkedin.com/in/tombowers93/" class="mdi mdi-linkedin icon-link"  title="LinkedIn/Tombowers93"><span class="inner-text">LinkedIn</span></a>
-
-            <a href="mailto:tomcbowers@gmail.com" class="mdi mdi-email icon-link" title="tomcbowers@gmail.com"><span class="inner-text">Email Me!</span></a>
-
-            <a href="tel:2085708741" class="mdi mdi-phone icon-link" title="208.570.8741"><span class="inner-text">Call Me!</span></a>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-8">
-      <h1>Projects</h1>
-      <div class="card-columns">
-        <div class="card">
-          <div class="card-header">
-            Keepr
-          </div>
-          <div class="card-body">
-            <div class="card-title">
-            <img src="./img/vaultlogo.png" class="img-fluid pb-2">
-            <small><a href="https://github.com/CyberTomB/keepr" title="github/cybertomb/keepr" target="_blank" class="mdi mdi-github"> Github Repo</a></small>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Tom Bowers</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/NISEI_CREDIT.svg" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+        <!-- Simple line icons-->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css" rel="stylesheet" />
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        <link rel="stylesheet" href="css/custom.css">
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <a class="menu-toggle rounded" href="#"><i class="fas fa-bars"></i></a>
+        <nav id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand"><a href="#page-top">Tom Bowers</a></li>
+                <li class="sidebar-nav-item"><a href="#about">About</a></li>
+                <li class="sidebar-nav-item"><a href="#languages">Languages</a></li>
+                <li class="sidebar-nav-item"><a href="#portfolio">Portfolio</a></li>
+                <li class="sidebar-nav-item"><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <!-- Header-->
+        <header class="masthead d-flex align-items-center">
+            <div class="container px-4 px-lg-5 text-left" id="header-details">
+                <img src="https://avatars.githubusercontent.com/u/49372787?v=4" alt="Github Avatar" class="rounded img-fluid" id="header-img">
+                <div id="header-info">
+                    <h1 class="mb-1 text-light">Tom Bowers</h1>
+                <h3 class="mb-5 text-light"><em>Full-Stack Web and Software Developer</em></h3>
+                <a class="btn btn-light btn-xl" href="#about">About Me</a>
+                </div>
             </div>
-            <p class="card-text">A Pinterest-esque web app built using Vue framework and DOTNET C# server. Includes integrations with SASS, Bootstrap.</p>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-header">
-            Bugsville
-          </div>
-          <div class="card-body">
-            <div class="card-title">
-            <img src="./img/buglogo.png" class="img-fluid pb-2">
-            <small><a href="https://github.com/CyberTomB/bug-logger" title="github/cybertomb/bug-logger" target="_blank" class="mdi mdi-github"> Github Repo</a> | <a href="https://bugsville.herokuapp.com/#/bugs" title="Live Site" target="_blank" class="mdi mdi-web"> Live Site</a></small>
+        </header>
+        <!-- About-->
+        <section class="content-section bg-light" id="about">
+            <div class="container px-4 px-lg-5 text-center">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-lg-10 mx-auto text-center d-flex align-items-center flex-column">
+                        <h2>About Me</h2>
+                        <hr class="line">
+                        <p class="lead mb-5">
+                            I try to learn something new everyday - whether that's a new gambit in chess, a fact about another part of the world I hope to visit, or a javascript framework - I'm always curious! The best part of learning something new is getting to share that knowledge with others.
+                        </p>
+                        <p class="lead mb-5">
+                            I'm a full-stack web developer. My work has been primarily built in Vue and Node.js, and I'm continuing to learn more about them both and about other languages and frameworks - like C# and Clojure. 
+                        </p>
+                        <p class="lead mb-5">
+                            In my free time you can find me at the game store playing classics like Catan and Dominion, and other favorite tabletop games (Android: Netrunner, anyone?). Connect with me, and let's learn or play something together!
+                        </p>
+                        <a class="btn btn-xl btn-dark me-4" href="#contact" title="contact"><svg width="16px" height="16px" viewBox="0 0 5867 5867" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;" fill="white"><path d="M4663.85,5474.57l-4410.32,-0l0,-3225.19l719.33,0l0,448.107l-271.222,0l-0,2334.88l3514.1,-0l0,-2334.88l-2346.67,0l-0,-448.107l2794.77,0l-0,3225.19Zm949.279,-1857.29l-725.226,0l0,-448.107l277.119,0l0,-2328.98l-3520,0l0,2328.98l2352.56,0l-0,448.107l-2800.67,0l-0,-3225.19l4416.21,-0l0,3225.19Z" style="fill-rule:nonzero;"/></svg>&nbsp; Let's Connect!</a>
+                    </div>
+                </div>
             </div>
-            <p class="card-text">A web app for logging and solving bugs in your code. Built using Vue framework and Node.js. Includes integrations with SASS, Bootstrap.</p>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-header">
-            Janken
-          </div>
-          <div class="card-body">
-            <div class="card-title">
-            <img src="./img/rps.jpg" class="img-fluid pb-2">
-            <small><a href="https://github.com/CyberTomB/rock-paper-scissors" title="github/cybertomb/rock-paper-scissors" target="_blank" class="mdi mdi-github"> Github Repo</a> | <a href="https://cybertomb.github.io/rock-paper-scissors/" title="Live Site" target="_blank" class="mdi mdi-web"> Live Site</a></small>
+        </section>
+        <!-- Languages-->
+        <section class="content-section bg-primary text-white text-center" id="languages">
+            <div class="container px-4 px-lg-5">
+                <div class="content-section-heading d-flex align-items-center flex-column mb-5">
+                    <h2 class="mb-2">Languages and Tools</h2>
+                    <hr class="line">
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col text-center">
+                        <div class="mt-5 mx-3 language-img text-center">
+                            <img src="assets/img/language-img/bootstrap.png" alt="" class="img-fluid">
+                        </div>
+                    </div>
+                    <div class="col text-center">
+                        <div class="mt-5 mx-3 language-img">
+                            <img src="assets/img/language-img/Clojure_logo.svg.png" alt="" class="img-fluid">
+                        </div>
+                    </div>
+                    <div class="col text-center">
+                        <div class="mt-5 mx-3 language-img">
+                            <img src="assets/img/language-img/csharp.png" alt="" class="img-fluid">
+                        </div>
+                    </div>
+                    <div class="col text-center">
+                        <div class="mt-5 mx-3 language-img">
+                            <img src="assets/img/language-img/CSS.png" alt="" class="img-fluid">
+                        </div>
+                    </div>
+                    <div class="col text-center">
+                        <div class="mt-5 mx-3 language-img">
+                            <img src="assets/img/language-img/gamemaker.png" alt="" class="img-fluid">
+                        </div>
+                    </div>
+                    <div class="col text-center">
+                        <div class="mt-5 mx-3 language-img">
+                            <img src="assets/img/language-img/git.png" alt="" class="img-fluid">
+                        </div>
+                    </div>
+                                        <div class="col text-center">
+                        <div class="mt-5 mx-3 language-img">
+                            <img src="assets/img/language-img/unity.png" alt="" class="img-fluid">
+                        </div>
+                    </div>
+                    <div class="col text-center">
+                        <div class="mt-5 mx-3 language-img">
+                            <img src="assets/img/language-img/html.png" alt="" class="img-fluid">
+                        </div>
+                    </div>
+                    <div class="col text-center">
+                        <div class="mt-5 mx-3 language-img">
+                            <img src="assets/img/language-img/JavaScript.png" alt="" class="img-fluid">
+                        </div>
+                    </div>
+                    <div class="col text-center">
+                        <div class="mt-5 mx-3 language-img">
+                            <img src="assets/img/language-img/mySQL.png" alt="" class="img-fluid">
+                        </div>
+                    </div>
+                    <div class="col text-center">
+                        <div class="mt-5 mx-3 language-img">
+                            <img src="assets/img/language-img/node.png" alt="" class="img-fluid">
+                        </div>
+                    </div>
+                                        <div class="col text-center">
+                        <div class="mt-5 mx-3 language-img">
+                            <img src="assets/img/language-img/mongodb.png" alt="" class="img-fluid">
+                        </div>
+                    </div>
+
+                    <div class="col text-center">
+                        <div class="mt-5 mx-3 language-img">
+                            <img src="assets/img/language-img/Vue.png" alt="" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
             </div>
-            <p class="card-text">A simple javascript, HTML, CSS web app for playing Rock-Paper-Scissors vs a computer opponent. How many wins can you get?</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</main>
-<footer class="container-fluid bg-info">
-</footer>
-<script src="script.js"></script>
-</body></html>
+        </section>
+        <!-- Portfolio-->
+        <section class="content-section bg-secondary" id="portfolio">
+            <div class="container px-4 px-lg-5">
+                <div class="content-section-heading text-center d-flex flex-column align-items-center">
+                    <h3 class="text-danger mb-0">Portfolio</h3>
+                    <h2>Recent Projects</h2>
+                    <hr class="line mb-5">
+                </div>
+                <div class="row gx-0 align-items-center justify-content-center">
+                    <div class="col-lg-5">
+                        <a class="portfolio-item" href="https://github.com/CyberTomB/keepr" target="_blank" title="Keepr (Repository)">
+                            <div class="caption">
+                                <div class="caption-content">
+                                    <div class="h2">Keepr</div>
+                                    <p class="mb-0">A Pinterest-esque web app built using Vue on the front-end and DOTNET C# server with mySQL. Includes integrations with SASS, Bootstrap.</p>
+                                </div>
+                            </div>
+                            <img class="img-fluid" src="assets/img/portfolio-1.jpg" alt="Keepr" />
+                        </a>
+                    </div>
+                    <div class="col-lg-5">
+                        <a class="portfolio-item" href="https://bugsville.herokuapp.com/#/" target="_blank" title="Bugsville">
+                            <div class="caption">
+                                <div class="caption-content">
+                                    <div class="h2">Bugsville</div>
+                                    <p class="mb-0">A web app for logging and solving bugs in your code. Built using Vue framework and Node.js. Includes integrations with SASS, Bootstrap.</p>
+                                </div>
+                            </div>
+                            <img class="img-fluid" src="assets/img/portfolio-2.jpg" alt="Bugsville" />
+                        </a>
+                    </div>
+                    <div class="col-lg-5">
+                        <a class="portfolio-item" href="https://cybertomb.github.io/rock-paper-scissors/" target="_blank" title="Janken">
+                            <div class="caption">
+                                <div class="caption-content">
+                                    <div class="h2">Janken</div>
+                                    <p class="mb-0">A simple javascript, HTML, CSS web app for playing Rock-Paper-Scissors vs a computer opponent. How many wins can you get?</p>
+                                </div>
+                            </div>
+                            <img class="img-fluid" src="assets/img/portfolio-3.jpg" alt="Janken" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Call to Action-->
+        <section class="content-section bg-danger">
+            <div class="container px-4 px-lg-5 text-center">
+                <h2 class="mb-4 text-gray">See what else I've been working on:</h2>
+                <a class="btn btn-xl me-4 icon-social-github" href="https://github.com/CyberTomB" title="github/CyberTomB" target="_blank" id="github-link">&nbsp; My Github!</a>
+            </div>
+        </section>
+        <!-- Footer-->
+        <footer class="footer text-center" id="contact">
+            <div class="container px-4 px-lg-5">
+                <div class="d-flex align-items-center flex-column  mb-4">
+                    <h2 class="mb-2">Let's Connect!</h2>
+                    <hr class="line">
+                    <div class="lead">
+                        If you like what you see, give me a call or email and I'll reply as soon as I can. Or connect with me on LinkedIn!
+                    </div>
+                </div>
+                <div class="row mb-5 justify-content-center">
+                    <div class="col-md-4 d-flex align-items-center flex-column">
+                        <a href="tel:2085708741" class="social-link rounded-circle text-white mr-3"><i class="fas fa-phone"></i></a>
+                        <h6 class="mt-3">208.570.8741</h6>
+                    </div>
+                    <div class="col-md-4 d-flex align-items-center flex-column">
+                        <a class="social-link rounded-circle text-white mr-3" href="mailto:tomcbowers@gmail.com"><i class="fas fa-envelope"></i></a>
+                        <h6 class="mt-3">tomcbowers@gmail.com</h6>
+                    </div>
+                    <div class="col-md-4 d-flex align-items-center flex-column">
+                        <a class="social-link rounded-circle text-white mr-3" href="https://www.linkedin.com/in/tombowers93/" target="_blank" rel="external"><i class="icon-social-linkedin"></i></a>
+                        <h6 class="mt-3">linkedin/tombowers93</h6>
+                    </div>
+                    <!-- <div class="col-md-3 d-flex align-items-center flex-column">
+                        <a class="social-link rounded-circle text-white" href="https://github.com/CyberTomB" target="_blank" rel="external"><i class="icon-social-github"></i></a>
+                        <h6 class="mt-3">github/cybertomb</h6>
+                    </div> -->
+                </div>
+                <p class="text-muted small mb-0">Copyright &copy; Tom Bowers 2021</p>
+            </div>
+        </footer>
+        <!-- Scroll to Top Button-->
+        <a class="scroll-to-top rounded" href="#page-top"><i class="fas fa-angle-up"></i></a>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>

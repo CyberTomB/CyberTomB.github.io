@@ -1,0 +1,45 @@
+#header-img {
+  width: 30vh;
+  height: 30vh;
+}
+
+#header-details {
+  position: relative;
+}
+
+#header-info {
+  position: absolute;
+  top: -3.75vh;
+  left: 20rem;
+}
+
+hr.line {
+  margin-top: 1vh;
+  height: 1.5px;
+  width: 175px;
+  opacity: 1;
+}
+
+.language-img{
+  min-width: 7rem;
+  max-width: max-content;
+  /* max-height: 7rem; */
+  /* max-width: 25vw; */
+}
+
+.text-gray {
+  color: rgb(59, 59, 59);
+}
+
+#github-link{
+  background-color: #1D809F;
+  color: white;
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
+  font-weight: 500;
+  font-size: 20px;
+}
+
+#github-link:hover {
+  background-color: #155d74;
+  text-decoration: none;
+}
