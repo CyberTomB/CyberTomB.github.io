@@ -3,7 +3,7 @@
   height: 30vh;
 }
 
-#header-details {
+/* #header-details {
   position: relative;
 }
 
@@ -11,7 +11,7 @@
   position: absolute;
   top: -3.75vh;
   left: 20rem;
-}
+} */
 
 hr.line {
   margin-top: 1vh;
