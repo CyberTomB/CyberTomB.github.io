@@ -61,3 +61,15 @@ hr.line {
 #janken-caption {
   margin-top: 2rem;
 }
+
+/* Animations */
+@keyframes demo {
+  from {background-color: red;}
+  to {background-color: blue;}
+}
+
+#header-info {
+  animation-name: demo;
+  animation-duration: 4s;
+  background-color: blue;
+}
