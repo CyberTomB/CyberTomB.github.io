@@ -63,13 +63,25 @@ hr.line {
 }
 
 /* Animations */
-@keyframes demo {
-  from {background-color: red;}
-  to {background-color: blue;}
+@keyframes slide-from-left {
+  from {right: 300px}
+  to { right: 0px}
+}
+
+@keyframes fade-in {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+#header-img {
+  animation-name: slide-from-left;
+  animation-duration: 2s;
+  animation-timing-function: ease;
+  position: relative;
 }
 
 #header-info {
-  animation-name: demo;
-  animation-duration: 4s;
-  background-color: blue;
+  animation-name: fade-in;
+  animation-duration: 2s;
+  animation-timing-function: linear;
 }
