@@ -19,21 +19,4 @@ async function getRepos() {
   });
 }
 
-// async function getRepoPages(repoName) {
-//   console.log("called with: ", repoName);
-//   fetch(`https://api.github.com/repos/CyberTomB/${repoName}/pages`).then(
-//     async (res) => {
-//       if (res.ok) {
-//         const resJson = await res.json();
-//         console.log(resJson);
-//       } else {
-//         throw new Error("Error: " + res.status);
-//       }
-//     }
-//   );
-// }
-
-// const repos = await getRepos();
-// console.log(repos);
-
 await getRepos();
