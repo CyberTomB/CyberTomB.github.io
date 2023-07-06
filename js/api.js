@@ -9,15 +9,12 @@ async function getRepos() {
           const dateB = new Date(b.updated_at);
           return dateA.getTime() < dateB.getTime();
         });
-        console.log(pageRepos);
         let content = "";
         for (let p of pageRepos) {
-          console.log(p.name);
           let title;
           title = p.name
             ?.split("-")
             .map((word) => {
-              console.log(word);
               return word[0].toUpperCase() + word.substr(1);
             })
             .join(" ");
@@ -38,19 +35,24 @@ async function getRepos() {
 }
 
 function generateMarqueeCardHtml(title, content, link) {
-  console.log(title, content, link);
   return `<div class="card marquee-card">
   <div class="card-body">
     <h5 class="card-title">${title}</h5>
     <p class="card-text">${content}</p>
-    <a href='${link}'>Check it out!</a>
+    <a href='${link}' class='btn btn-secondary'>Check it out!</a>
   </div>
 </div>`;
 }
 
+const marqueeContent = document.getElementById("marquee-content");
+
 function addContentToMarquee(template) {
-  const marquee = document.getElementById("marquee-content");
-  marquee.innerHTML += template;
+  marqueeContent.innerHTML += template;
 }
 
-await getRepos();
+function cloneMarqueeContent() {
+  const clonedContent = marqueeContent.cloneNode(true);
+  marqueeContent.appendChild(clonedContent);
+}
+
+getRepos();

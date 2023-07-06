@@ -7,12 +7,12 @@
   width: 100%;
   overflow: hidden;
   margin-top: 2em;
-  white-space: nowrap;
 }
 
 .marquee-content {
+  white-space: nowrap;
   display: inline-block;
-  animation: marquee 40s linear infinite;
+  animation: marquee 35s linear infinite;
 }
 
 .marquee-content:hover {
@@ -22,17 +22,16 @@
 .marquee-card {
   width: 18rem;
   display: inline-block;
-  margin-left: 4em;
+  margin-right: 1em;
   white-space: normal;
 }
 
 .marquee-card:hover {
-  background-color: rgba(var(--bs-primary-rgb), 90%);
+  background-color: rgba(var(--bs-primary-rgb), 95%);
 }
 
 @keyframes marquee {
-  /* 0% {transform: translateX(100%);}
-  50% {transform: translateX(0%);} */
+  0% {transform: translateX(100%);}
   100% {transform: translateX(-100%);}
 }
 
