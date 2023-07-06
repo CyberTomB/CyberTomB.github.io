@@ -3,25 +3,13 @@
   height: 30vh;
 }
 
-.marquee-container {
-  width: 100%;
-  overflow: hidden;
-  margin-top: 2em;
-}
-
-.marquee-content {
-  white-space: nowrap;
-  display: inline-block;
-}
-
-.marquee-card {
+.project-card {
   width: 18rem;
-  display: inline-block;
   margin-right: 1em;
   white-space: normal;
 }
 
-.marquee-card:hover {
+.project-card:hover {
   background-color: rgba(var(--bs-primary-rgb), 95%);
 }
 

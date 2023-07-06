@@ -3,33 +3,36 @@ async function getRepos() {
     async (res) => {
       if (res.ok) {
         const resJson = await res.json();
-        const pageRepos = resJson.filter((r) => r.has_pages);
-        pageRepos.sort((a, b) => {
-          const dateA = new Date(a.updated_at);
-          const dateB = new Date(b.updated_at);
-          return dateA.getTime() < dateB.getTime();
-        });
+        console.log(resJson);
         let content = "";
-        pageRepos.forEach((page, index) => {
-          if (index > 3) {
-            return;
-          }
-          let title;
-          title = page.name
-            ?.split("-")
-            .map((word) => {
-              return word[0].toUpperCase() + word.substr(1);
-            })
-            .join(" ");
-          const url = "https://cybertomb.github.io/" + page.name;
-          const description =
-            page.description ??
-            `
+        resJson
+          .filter((p) => {
+            return (
+              p.name !== "CyberTomB.github.io" && (p.homepage || p.has_pages)
+            );
+          })
+          .forEach((page, index) => {
+            console.log(page.name);
+            if (index > 3) {
+              return;
+            }
+            let title;
+            title = page.name
+              ?.split("-")
+              .map((word) => {
+                return word[0].toUpperCase() + word.substr(1);
+              })
+              .join(" ");
+            const url =
+              page.homepage || "https://cybertomb.github.io/" + page.name;
+            const description =
+              page.description ??
+              `
         example text that is at least a half dozen words long or something to test the word wrap
         `;
-          content += buildGitHubPageCard(title, description, url);
-        });
-        addContentToMarquee(content);
+            content += buildGitHubPageCard(title, description, url);
+          });
+        addContentToDom(content);
       } else {
         throw new Error("Error: " + res.status);
       }
@@ -38,24 +41,18 @@ async function getRepos() {
 }
 
 function buildGitHubPageCard(title, content, link) {
-  return `<div class="card marquee-card">
+  return `<div class="card project-card">
   <div class="card-body">
     <h5 class="card-title">${title}</h5>
     <p class="card-text">${content}</p>
-    <a href='${link}' class='btn btn-secondary'>Check it out!</a>
+    <a href='${link}' target="_blank" class='btn btn-secondary'>Check it out!</a>
   </div>
 </div>`;
 }
 
-const marqueeContent = document.getElementById("marquee-content");
-
-function addContentToMarquee(template) {
+function addContentToDom(template) {
+  const marqueeContent = document.getElementById("project-content");
   marqueeContent.innerHTML += template;
-}
-
-function cloneMarqueeContent() {
-  const clonedContent = marqueeContent.cloneNode(true);
-  marqueeContent.appendChild(clonedContent);
 }
 
 getRepos();
