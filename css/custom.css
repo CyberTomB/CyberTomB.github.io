@@ -12,11 +12,6 @@
 .marquee-content {
   white-space: nowrap;
   display: inline-block;
-  animation: marquee 35s linear infinite;
-}
-
-.marquee-content:hover {
-  animation-play-state: paused;
 }
 
 .marquee-card {
@@ -28,11 +23,6 @@
 
 .marquee-card:hover {
   background-color: rgba(var(--bs-primary-rgb), 95%);
-}
-
-@keyframes marquee {
-  0% {transform: translateX(100%);}
-  100% {transform: translateX(-100%);}
 }
 
 hr.line {

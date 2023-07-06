@@ -10,22 +10,25 @@ async function getRepos() {
           return dateA.getTime() < dateB.getTime();
         });
         let content = "";
-        for (let p of pageRepos) {
+        pageRepos.forEach((page, index) => {
+          if (index > 3) {
+            return;
+          }
           let title;
-          title = p.name
+          title = page.name
             ?.split("-")
             .map((word) => {
               return word[0].toUpperCase() + word.substr(1);
             })
             .join(" ");
-          const url = "https://cybertomb.github.io/" + p.name;
+          const url = "https://cybertomb.github.io/" + page.name;
           const description =
-            p.description ??
+            page.description ??
             `
         example text that is at least a half dozen words long or something to test the word wrap
         `;
-          content += generateMarqueeCardHtml(title, description, url);
-        }
+          content += buildGitHubPageCard(title, description, url);
+        });
         addContentToMarquee(content);
       } else {
         throw new Error("Error: " + res.status);
@@ -34,7 +37,7 @@ async function getRepos() {
   );
 }
 
-function generateMarqueeCardHtml(title, content, link) {
+function buildGitHubPageCard(title, content, link) {
   return `<div class="card marquee-card">
   <div class="card-body">
     <h5 class="card-title">${title}</h5>
